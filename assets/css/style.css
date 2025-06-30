@@ -45,7 +45,13 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;paddi
 .btn:hover{background:var(--forest);text-decoration:none}
 
 /* cards grid */
-.cta-grid{display:grid;gap:1.5rem;margin:3rem 0}
+.cta-grid{
+  display:flex;                /* ← was display:grid */
+  flex-wrap:wrap;              /* keep vertical stacking on small screens */
+  gap:1.5rem;
+  justify-content:center;      /* ← NEW: horizontally centre the cards */
+  margin:3rem 0;
+}
 @media(min-width:600px){.cta-grid{grid-template-columns:repeat(3,1fr)}}
 .card{background:#fff;border:1px solid var(--moss);padding:1.5rem;border-radius:var(--radius);transition:transform .2s}
 .card:hover{transform:translateY(-4px)}

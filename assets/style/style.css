@@ -1,0 +1,67 @@
+/* ───── Witness Tree Network theme ───────────────────────── */
+:root {
+  --forest: #234e1e;
+  --cedar:  #4b381e;
+  --moss:   #a4b494;
+  --sky:    #87bcd9;
+  --dark:   #1a1a1a;
+  --light:  #f8f8f8;
+  --radius: 0.5rem;
+  --font-body: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* reset */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);line-height:1.6;color:var(--dark);background:var(--light)}
+a{color:var(--forest);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+.container{width:90%;max-width:960px;margin:auto}
+
+/* header + nav */
+header{background:var(--forest)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.logo{display:flex;align-items:center;gap:0.5rem;color:#fff;font-weight:700}
+.logo img{height:40px;width:auto}
+.menu{list-style:none;display:flex;gap:1.25rem}
+.menu a{color:#fff;font-weight:500}
+.menu a:hover{color:var(--sky)}
+/* simple burger for mobile */
+#nav-toggle,.burger{display:none}
+@media(max-width:680px){
+  #nav-toggle{display:none}
+  .burger{display:block;width:24px;height:24px;cursor:pointer;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 24 24'%3E%3Cpath d='M3 6h18M3 12h18M3 18h18' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat}
+  .menu{flex-direction:column;position:absolute;top:64px;right:0;background:var(--forest);padding:1rem;display:none}
+  #nav-toggle:checked ~ .menu{display:flex}
+}
+
+/* hero */
+.hero{padding:3rem 0;text-align:center}
+.hero h1{font-size:2.5rem;font-weight:700;margin-bottom:0.5rem}
+.accent{color:var(--forest)}
+.lead{font-size:1.1rem;margin-bottom:1.5rem}
+.btn{display:inline-block;background:var(--cedar);color:#fff;padding:0.75rem 1.25rem;border-radius:var(--radius);font-weight:600}
+.btn:hover{background:var(--forest);text-decoration:none}
+
+/* cards grid */
+.cta-grid{display:grid;gap:1.5rem;margin:3rem 0}
+@media(min-width:600px){.cta-grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--moss);padding:1.5rem;border-radius:var(--radius);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+
+/* microchurch list */
+.micro-list article{padding:1rem 0;border-bottom:1px solid var(--moss)}
+.micro-list h2{color:var(--forest);margin-bottom:0.25rem}
+
+/* staff list */
+.staff-list{list-style:none;padding:0}
+.staff-list li{margin:1rem 0}
+.staff-list h2{margin-bottom:0.25rem}
+
+/* verse blockquote */
+.verse{font-style:italic;background:var(--moss);padding:1rem;border-radius:var(--radius);margin:2rem 0}
+.verse cite{display:block;text-align:right;margin-top:0.5rem;font-style:normal;font-weight:600}
+
+/* footer */
+footer{background:var(--cedar);color:#fff;text-align:center;padding:1rem 0;margin-top:3rem;font-size:0.9rem}

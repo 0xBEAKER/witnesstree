@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Witness Tree Network</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+  <nav class="container">
+    <a class="logo" href="index.html">
+      <img src="assets/img/tree.png" alt="Witness Tree Network logo">
+      Witness Tree Network
+    </a>
+
+    <input id="nav-toggle" type="checkbox">
+    <label for="nav-toggle" class="burger"></label>
+
+    <ul class="menu">
+      <li><a href="mission.html">Mission</a></li>
+      <li><a href="microchurches.html">Microchurches</a></li>
+      <li><a href="gatherings.html">Weekly Branch</a></li>
+      <li><a href="staff.html">Staff</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero container">
+    <h1>Rooted in Christ,<br><span class="accent">Branching into Community</span></h1>
+    <p class="lead">
+      A network of microchurches sharing the gospel of Jesus Christ in word and deed.
+    </p>
+    <a href="mission.html" class="btn">Learn our Purpose</a>
+  </section>
+
+  <section class="cta-grid container">
+    <a class="card" href="microchurches.html">
+      <h3>Discover Microchurches</h3>
+      <p>Contextualized missional communities like Forested Families &amp; Cedar Family Table.</p>
+    </a>
+    <a class="card" href="gatherings.html">
+      <h3>Join a Gathering</h3>
+      <p>See when &amp; where we meet and read this week’s <em>Weekly Branch</em>.</p>
+    </a>
+    <a class="card" href="staff.html">
+      <h3>Meet the Team</h3>
+      <p>Connect with our leadership and learn how to get involved.</p>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> Witness Tree Network — a 501(c)(3) nonprofit.</p>
+  </div>
+</footer>
+
+<script>
+  /* auto-update footer year */
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

@@ -45,14 +45,19 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;paddi
 .btn:hover{background:var(--forest);text-decoration:none}
 
 /* cards grid */
+/* ─── CTA card container ─────────────────────────────── */
 .cta-grid{
-  display:flex;                /* ← was display:grid */
-  flex-wrap:wrap;              /* keep vertical stacking on small screens */
+  display:grid;                 /* back to Grid  */
   gap:1.5rem;
-  justify-content:center;      /* ← NEW: horizontally centre the cards */
   margin:3rem 0;
+  justify-content:center;       /* centre the entire grid block */
 }
-@media(min-width:600px){.cta-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:600px){
+  /* three auto-width cards side-by-side on tablets / desktop */
+  .cta-grid{
+    grid-template-columns:repeat(3,auto);
+  }
+}
 .card{background:#fff;border:1px solid var(--moss);padding:1.5rem;border-radius:var(--radius);transition:transform .2s}
 .card:hover{transform:translateY(-4px)}
 
